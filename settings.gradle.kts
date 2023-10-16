@@ -7,4 +7,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "H03-Root"
+rootProject.name = "H03-Student"
