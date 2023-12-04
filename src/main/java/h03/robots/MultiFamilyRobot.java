@@ -12,5 +12,23 @@ public class MultiFamilyRobot extends Robot{
         super(x, y, families[0]);
         this.families=families;
     }
-    
+
+    public void exchange(){
+        current = (current + 1) % families.length;
+        setRobotFamily(families[current]);
+    }
+
+    @Override
+    public void move(){
+        super.move();
+        exchange();
+    }
+
+    public void move(final boolean exchange){
+        super.move();
+        if (exchange){
+            exchange();
+        }
+    }
+
 }
