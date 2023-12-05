@@ -2,6 +2,7 @@ package h03;
 
 import fopbot.World;
 import h03.robots.MultiFamilyRobot;
+import h03.robots.RGBRobots;
 
 /**
  * Main entry point in executing the program.
