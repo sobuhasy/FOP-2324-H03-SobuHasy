@@ -4,6 +4,7 @@ import fopbot.RobotFamily;
 import fopbot.World;
 import h03.robots.MultiFamilyRobot;
 import h03.robots.RGBRobots;
+import h03.robots.ChessBoardRobot;
 
 /**
  * Main entry point in executing the program.
