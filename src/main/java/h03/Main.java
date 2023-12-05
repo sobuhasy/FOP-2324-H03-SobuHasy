@@ -15,14 +15,16 @@ public class Main {
      * @param args program arguments, currently ignored
      */
     public static void main(String[] args) {
+        World.setSize(5, 5);
+
         final var robots = new Robot[]{
             new MultiFamilyRobot(0, 0,
                 new RobotFamily[]{
                     RobotFamily.SQUARE_AQUA, RobotFamily.SQUARE_BLACK, RobotFamily.SQUARE_GREEN
-                }
+            }
             ),
-            new RGBRobot(1, 1, false),
-            new RGBRobot(1, 2, true),
+            new RGBRobots(1, 1, false),
+            new RGBRobots(1, 2, true),
         };
 
 
