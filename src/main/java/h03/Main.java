@@ -21,17 +21,7 @@ public class Main {
         World.setSize(5, 5);
 
         final var robots = new Robot[]{
-            new MultiFamilyRobot(0, 0,
-                new RobotFamily[]{
-                    RobotFamily.SQUARE_AQUA, RobotFamily.SQUARE_BLACK, RobotFamily.SQUARE_GREEN
-            }
-            ),
-            new RGBRobots(1, 1, false),
-            new RGBRobots(1, 2, true),
-            new ChessBoardRobot(2, 0),
-            new ChessBoardRobot(2, 1),
-            new ChessBoardRobot(3, 0),
-            new ChessBoardRobot(3, 1),
+            new Robot(0, 0,)
         };
 
         World.setVisible(true);
