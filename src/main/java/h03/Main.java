@@ -7,7 +7,6 @@ import fopbot.World;
 import h03.robots.MultiFamilyRobot;
 import h03.robots.RGBRobot;
 import h03.robots.ChessBoardRobot;
-import h03.RobotSynchroniser;
 
 /**
  * Main entry point in executing the program.
@@ -18,7 +17,7 @@ public class Main {
      *
      * @param args program arguments, currently ignored
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         World.setSize(5, 5);
 
         final var robots = new Robot[]{

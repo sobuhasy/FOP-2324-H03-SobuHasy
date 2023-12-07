@@ -4,11 +4,6 @@ import fopbot.Direction;
 import fopbot.Robot;
 import fopbot.World;
 
-import static fopbot.Direction.DOWN;
-import static fopbot.Direction.LEFT;
-import static fopbot.Direction.RIGHT;
-import static fopbot.Direction.UP;
-
 public class RobotSynchroniser {
     private final Robot[] robots;
 
@@ -29,6 +24,35 @@ public class RobotSynchroniser {
     public void setY(final int y){
         if(y >= 0 && y < World.getHeight()){
             this.y = y;
+        }
+    }
+
+    public void setDirection(final Direction direction){
+        if (direction != null){
+            this.direction = direction;
+        }
+    }
+
+    public void sync(){
+        for (final Robot r : robots){
+            final int goalX = this.x != -1 ? this.x : r.getX();
+            final int goalY = this.y != -1 ? this.y : r.getY();
+            final Direction goalDir = this.direction != null ? this.direction : r.getDirection();
+            while (true){
+                while (r.getDirection() == Direction.UP && r.getY() < goalY
+                    || r.getDirection() == Direction.RIGHT && r.getX() < goalX
+                    || r.getDirection() == Direction.DOWN && r.getY() > goalY
+                    || r.getDirection() == Direction.LEFT && r.getX() > goalX
+                ){
+                    r.move();
+                }
+                if (goalDir == r.getDirection() && r.getX() == goalX && r.getY() == goalY){
+                    break;
+                }
+                r.turnLeft();
+            }
+
+
         }
     }
 
