@@ -2,8 +2,9 @@ package h03.robots;
 
 import fopbot.RobotFamily;
 
-
-
+import static fopbot.RobotFamily.SQUARE_BLUE;
+import static fopbot.RobotFamily.SQUARE_RED;
+import static fopbot.RobotFamily.SQUARE_GREEN;
 public class RGBRobot extends MultiFamilyRobot{
     private static final RobotFamily[] RGB = new RobotFamily[][SQUARE_RED, SQUARE_GREEN, SQUARE_BLUE];
 
