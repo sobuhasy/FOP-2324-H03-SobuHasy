@@ -4,6 +4,7 @@ import fopbot.Direction;
 import fopbot.Robot;
 import fopbot.World;
 
+
 public class RobotSynchroniser {
     private final Robot[] robots;
 
